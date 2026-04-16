@@ -27,6 +27,7 @@ void loop() {
 Pada bagian ini, kita akan belajar bagaimana mengontrol LED menggunakan Arduino UNO. LED akan menyala dan mati secara bergantian setiap 2 detik.
 
 ---
+![Wiwing LED](images/led.png)
 
 ### 🔌 Wiring
 - Anoda LED → Pin 11 (melalui resistor 220Ω)
@@ -67,6 +68,7 @@ void loop() {
 Pada bagian ini, kita akan membaca input dari push button menggunakan Arduino UNO. Ketika tombol ditekan, akan muncul pesan di Serial Monitor.
 
 ---
+![Wiring Button](images/button.png)
 
 ### 🔌 Wiring
 - 1A → GND  
@@ -113,6 +115,7 @@ void loop() {
 Pada bagian ini, kita akan mengukur jarak menggunakan sensor ultrasonik HC-SR04. Sensor ini bekerja dengan mengirim gelombang suara dan mengukur waktu pantulannya.
 
 ---
+![Wiring Ultrasonik](images/ultrasonik.png)
 
 ### 🔌 Wiring
 - VCC → 5V  
@@ -176,6 +179,7 @@ delay(500);
 Pada bagian ini, kita akan mengontrol arah dan kecepatan motor DC menggunakan driver L293D. Motor akan bergerak maju, berhenti, lalu mundur secara bergantian.
 
 ---
+![Wiring motor](images/motor.png)
 
 ### 🔌 Wiring
 - Motor:
@@ -250,6 +254,7 @@ void loop() {
 Pada bagian ini, kita menggabungkan sensor ultrasonik dan motor DC untuk membuat robot sederhana yang dapat menghindari halangan. Robot akan bergerak maju, dan berhenti jika mendeteksi objek di depan.
 
 ---
+![Wiring Robot](images/robot.png)
 
 ### 🔌 Wiring
 
