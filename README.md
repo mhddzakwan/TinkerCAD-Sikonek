@@ -22,95 +22,7 @@ void loop() {
 }
 ```
 
-## 💡 2. Menghidupkan dan Mematikan LED
-
-Pada bagian ini, kita akan belajar bagaimana mengontrol LED menggunakan Arduino UNO. LED akan menyala dan mati secara bergantian setiap 2 detik.
-
----
-![Wiwing LED](images/led.png)
-
-### 🔌 Wiring
-- Anoda LED → Pin 11 (melalui resistor 220Ω)
-- Katoda LED → GND
-
----
-
-### 🧠 Penjelasan Singkat
-- `pinMode(led, OUTPUT)` → mengatur pin sebagai output
-- `digitalWrite(HIGH)` → menyalakan LED
-- `digitalWrite(LOW)` → mematikan LED
-- `delay(2000)` → jeda 2 detik
-
----
-
-### 💻 Kode
-```cpp
-int led = 11;
-
-void setup() {
-  Serial.begin(115200);
-  pinMode(led, OUTPUT);
-}
-
-void loop() {
-  digitalWrite(led, HIGH);
-  Serial.println("Lampu Menyala abangkuhh...");
-  delay(2000);
-
-  digitalWrite(led, LOW);
-  Serial.println("Lampu Mati abangkuhh...");
-  delay(2000);
-}
-```
-
-## 🔘 3. Menggunakan Push Button
-
-Pada bagian ini, kita akan membaca input dari push button menggunakan Arduino UNO. Ketika tombol ditekan, akan muncul pesan di Serial Monitor.
-
----
-![Wiring Button](images/button.png)
-
-### 🔌 Wiring
-- 1A → GND  
-- 2A → Pin 6  
-
-> Menggunakan mode `INPUT_PULLUP`, sehingga:
-> - Tidak ditekan → HIGH  
-> - Ditekan → LOW  
-
----
-
-### 🧠 Penjelasan Singkat
-- `pinMode(button, INPUT_PULLUP)` → mengaktifkan resistor internal pull-up
-- `digitalRead()` → membaca status tombol
-- LOW → tombol ditekan  
-- HIGH → tombol dilepas  
-
----
-
-### 💻 Kode
-```cpp
-int button = 6;
-
-void setup() {
-  pinMode(button, INPUT_PULLUP);
-  Serial.begin(9600);
-}
-
-void loop() {
-  int statusButton = digitalRead(button);
-
-  if (statusButton == LOW) {
-    Serial.println("Tombol ditekan");
-  } else {
-    Serial.println("Tombol dilepas");
-  }
-
-  delay(100);
-}
-```
-
-## 📏 4. Menggunakan Sensor Ultrasonik (HC-SR04)
+## 📏 2. Menggunakan Sensor Ultrasonik (HC-SR04)
 
 Pada bagian ini, kita akan mengukur jarak menggunakan sensor ultrasonik HC-SR04. Sensor ini bekerja dengan mengirim gelombang suara dan mengukur waktu pantulannya.
 
@@ -174,7 +86,7 @@ delay(500);
 
 
 
-## ⚙️ 5. Mengontrol Gearmotor DC dengan L293D
+## ⚙️ 3. Mengontrol Gearmotor DC dengan L293D
 
 Pada bagian ini, kita akan mengontrol arah dan kecepatan motor DC menggunakan driver L293D. Motor akan bergerak maju, berhenti, lalu mundur secara bergantian.
 
@@ -249,7 +161,7 @@ void loop() {
 }
 ```
 
-## 🤖 6. Avoidance Robot (Robot Penghindar Halangan)
+## 🤖 4. Avoidance Robot (Robot Penghindar Halangan)
 
 Pada bagian ini, kita menggabungkan sensor ultrasonik dan motor DC untuk membuat robot sederhana yang dapat menghindari halangan. Robot akan bergerak maju, dan berhenti jika mendeteksi objek di depan.
 
